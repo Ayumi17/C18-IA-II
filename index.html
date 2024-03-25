@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Inteligencia Artificial</title>
+</head>
+<body>
+    <center>
+    <h1>Inteligencia Artificial</h1>
+    <hr>
+    <h3>Animar objetos</h3>
+    <textarea cols='80' rows='4' id="codigo">
+        imgCat = loadImage("cat.png");
+        imgMouse = loadAnimation("mouse.png");
+        imgMouseReverse = loadAnimation("mouse_reverse.png");
+        imgCheese = loadImage("cheese.png");
+        imgTrap = loadImage("trap.png");
+        
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+
+    <br><br>
+    <hr>
+    <h3>Mover objetos</h3>
+    <textarea cols='80' rows='4' id="codigo2">
+        player = createSprite(200,40,20,20);
+        player.addAnimation("mouse",imgMouse);
+        player.addAnimation("imgMouseR",imgMouseReverse);
+        player.scale=0.1;
+        cheese = createSprite(random(20,370),random(60,370),20,20);
+        cheese.addImage("cheese",imgCheese);
+        cheese.scale=0.05;
+        cat = createSprite(random(20,370),random(60,370),20,20);
+        cat.addImage("cat",imgCat);
+        cat.scale=0.15;
+        trap1 = createSprite(20,150,20,20);
+        trap1.addImage("trap",imgTrap);
+        trap1.scale=0.08;
+        trap1.velocityX=2;
+        trap2 = createSprite(380,280,20,20);
+        trap2.addImage("trap",imgTrap);
+        trap2.scale=0.08;
+        trap2.velocityX=2;
+          
+        </textarea><br>
+        <button type="button" id="bt1" class="bt1" data-clipboard-target="#codigo2">Copiar</button>
+        <script>
+
+   
+    var clipboard2 = new Clipboard('.bt1');
+    </script>
+    </center>
+    
+</body>
+</html>
